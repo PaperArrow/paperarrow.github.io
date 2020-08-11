@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>$:/plugins/rmnvsl/krystal/config/close</li>
 
+<li>$:/plugins/rmnvsl/krystal/config/highlight</li>
+
 <li>$:/plugins/snowgoon88/edit-comptext</li>
 
 <li>$:/plugins/snowgoon88/edit-comptext/config</li>
@@ -233,9 +235,21 @@ Error message and password prompt
 
 <li>$:/plugins/tiddlywiki/markdown</li>
 
+<li>$:/plugins/tiddlywiki/share</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
+
+<li>$:/state/folded/Articles on Design Thinking</li>
+
+<li>$:/state/folded/Books on Design Thinking</li>
+
+<li>$:/state/folded/Change by Design by Tim Brown</li>
+
+<li>$:/state/folded/Design Thinking</li>
+
+<li>$:/state/folded/What is Design Thinking?</li>
 
 <li>$:/state/showeditpreview</li>
 
@@ -723,10 +737,12 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 
 &lt;br&gt;Note that the gray boxes in the context and transclude options are links to their respective tiddlers.</pre>
 </div>
-<div created="20200709151121658" creator="Xavier" modified="20200710045546802" modifier="Xavier" title="$:/.giffmex/TiddlyBlinkFoldData" type="application/json">
+<div created="20200709151121658" creator="Xavier" modified="20200811061006587" modifier="Xavier" title="$:/.giffmex/TiddlyBlinkFoldData" type="application/json">
 <pre>{
     &quot;hello&quot;: &quot;hide&quot;,
-    &quot;$:/Import&quot;: &quot;show&quot;
+    &quot;$:/Import&quot;: &quot;show&quot;,
+    &quot;Articles on Design Thinking&quot;: &quot;hide&quot;,
+    &quot;Change by Design by Tim Brown&quot;: &quot;hide&quot;
 }</pre>
 </div>
 <div created="20200418200434193" modified="20200521150811768" tags="$:/giffmex/stroll $:/giffmex/blinks" title="$:/.giffmex/ui/EditTemplate">
@@ -776,7 +792,7 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 <div caption="Hidden" created="20200502165303215" creator="Quick Config" modified="20200709151216637" modifier="Xavier" tags="$:/giffmex/blinks $:/giffmex/refs $:/giffmex/stroll" title="$:/.giffmex/ViewTemplate/refshidden" type="application/x-tiddler">
 <pre></pre>
 </div>
-<div bag="default" caption="Simple links" created="20200126143031898" creator="Xavier" modified="20200811060855379" modifier="Xavier" revision="0" tags="$:/giffmex/blinks $:/giffmex/refs $:/giffmex/stroll $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks" type="text/vnd.tiddlywiki">
+<div bag="default" caption="Simple links" created="20200126143031898" creator="Xavier" modified="20200709151219512" modifier="Xavier" revision="0" tags="$:/giffmex/blinks $:/giffmex/refs $:/giffmex/stroll" title="$:/.giffmex/ViewTemplate/refslinks" type="text/vnd.tiddlywiki">
 <pre>&lt;span class=&quot;viewtemplatebigtext&quot;&gt;
 
 &lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
@@ -805,7 +821,7 @@ background-color: &lt;&lt;colour tiddler-info-background&gt;&gt;;}
 
 &lt;/span&gt;</pre>
 </div>
-<div caption="Full text under sliders" created="20200126142157739" creator="Xavier" modified="20200811060855377" modifier="Xavier" tags="$:/giffmex/blinks $:/giffmex/refs $:/giffmex/stroll" title="$:/.giffmex/ViewTemplate/refstranscludecollapse">
+<div caption="Full text under sliders" created="20200126142157739" creator="Xavier" modified="20200709151219512" modifier="Xavier" tags="$:/giffmex/blinks $:/giffmex/refs $:/giffmex/stroll $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refstranscludecollapse">
 <pre>&lt;span class=&quot;viewtemplatebigtext&quot;&gt;
 
 &lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
@@ -11653,6 +11669,9 @@ exports.context = contextWidget;
 <div created="20200713112547514" creator="Xavier" modified="20200713112547514" modifier="Xavier" title="$:/plugins/rmnvsl/krystal/config/close">
 <pre>disable</pre>
 </div>
+<div created="20200811061138473" creator="Xavier" modified="20200811061138473" modifier="Xavier" title="$:/plugins/rmnvsl/krystal/config/highlight">
+<pre>disable</pre>
+</div>
 <div author="AlainD" core-version="&gt;=5.1.13" dependents="" description="Editor with some on-line completion capabilities" list="readme usage examples" plugin-type="plugin" source="https://github.com/snowgoon88/TW5-extendedit" title="$:/plugins/snowgoon88/edit-comptext" type="application/json" version="0.9.1">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -12916,16 +12935,108 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
+<div dependents="" description="Sharing tiddlers via URLs" list="readme wizard settings" name="Share" plugin-type="plugin" title="$:/plugins/tiddlywiki/share" type="application/json" version="5.1.22">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/DefaultTiddlers&quot;: {
+            &quot;title&quot;: &quot;$:/DefaultTiddlers&quot;,
+            &quot;text&quot;: &quot;[list[$:/StoryList]]&quot;
+        },
+        &quot;$:/SiteSubtitle&quot;: {
+            &quot;title&quot;: &quot;$:/SiteSubtitle&quot;,
+            &quot;text&quot;: &quot;tools to share tiddlers via URLs&quot;
+        },
+        &quot;$:/SiteTitle&quot;: {
+            &quot;title&quot;: &quot;$:/SiteTitle&quot;,
+            &quot;text&quot;: &quot;Share&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/above-story&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/above-story&quot;,
+            &quot;tags&quot;: &quot;$:/tags/AboveStory&quot;,
+            &quot;text&quot;: &quot;&lt;$transclude tiddler=\&quot;$:/plugins/tiddlywiki/share/wizard\&quot; mode=\&quot;block\&quot;/&gt;\n&quot;
+        },
+        &quot;$:/config/plugins/share/base-url&quot;: {
+            &quot;title&quot;: &quot;$:/config/plugins/share/base-url&quot;,
+            &quot;text&quot;: &quot;&quot;
+        },
+        &quot;$:/config/plugins/share/exclusions&quot;: {
+            &quot;title&quot;: &quot;$:/config/plugins/share/exclusions&quot;,
+            &quot;text&quot;: &quot;$:/library/sjcl.js $:/boot/bootprefix.js $:/boot/boot.js $:/boot/boot.css $:/core $:/isEncrypted $:/plugins/tiddlywiki/share $:/status/RequireReloadDueToPluginChange $:/temp/info-plugin $:/themes/tiddlywiki/snowwhite $:/themes/tiddlywiki/vanilla $:/HistoryList [prefix[$:/temp/]] [[$:/build]]&quot;
+        },
+        &quot;$:/config/plugins/share/filter&quot;: {
+            &quot;title&quot;: &quot;$:/config/plugins/share/filter&quot;,
+            &quot;text&quot;: &quot;[all[tiddlers]] -[subfilter{$:/config/plugins/share/exclusions}]&quot;
+        },
+        &quot;$:/core/ui/PageTemplate/pluginreloadwarning&quot;: {
+            &quot;title&quot;: &quot;$:/core/ui/PageTemplate/pluginreloadwarning&quot;,
+            &quot;text&quot;: &quot;&lt;!-- Disable plugin reload warnings --&gt;\n&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/rawmarkup.js&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/rawmarkup.js&quot;,
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/tiddlywiki/share/rawmarkup.js\ntype: application/javascript\nmodule-type: library\n\nRead tiddlers from the browser location hash\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n// Get the hash\nvar rawHash = document.location.hash.substring(1);\nif(rawHash.charAt(0) === \&quot;#\&quot;) {\n\tvar hash;\n\ttry{\n\t\thash = decodeURIComponent(rawHash.substring(1));\n\t} catch(ex) {\n\t\tconsole.log(\&quot;Share plugin: Error decoding location hash\&quot;,ex);\n\t}\n\t// Try to parse the hash as JSON\n\tif(hash) {\n\t\tvar tiddlers;\n\t\ttry {\n\t\t\ttiddlers= JSON.parse(hash);\n\t\t} catch(ex) {\n\t\t\tconsole.log(\&quot;Share plugin: Error parsing JSON from location hash\&quot;,ex);\n\t\t}\n\t\tif(tiddlers) {\n\t\t\t// Need to initialise these because we run before bootprefix.js and boot.js\n\t\t\twindow.$tw = window.$tw || {};\n\t\t\t$tw.boot = $tw.boot || {};\n\t\t\t$tw.preloadTiddlers = $tw.preloadTiddlers || [];\n\t\t\t// Prevent TiddlyWiki from booting\n\t\t\t$tw.boot.suppressBoot = true;\n\t\t\t// Load our styles\n\t\t\tvar stylesWrapper = document.createElement(\&quot;style\&quot;);\n\t\t\tstylesWrapper.innerHTML = tiddlywikiSharePluginStartupWarningCss;\n\t\t\tdocument.documentElement.appendChild(stylesWrapper);\n\t\t\t// Display the warning banner\n\t\t\tvar warningWrapper = document.createElement(\&quot;div\&quot;);\n\t\t\twarningWrapper.innerHTML = tiddlywikiSharePluginStartupWarningHtml;\n\t\t\tdocument.documentElement.appendChild(warningWrapper);\n\t\t\t// Add our event handlers\n\t\t\tdocument.getElementById(\&quot;startup-warning-proceed\&quot;).addEventListener(\&quot;click\&quot;,actionProceed,false);\n\t\t\tdocument.getElementById(\&quot;startup-warning-cancel\&quot;).addEventListener(\&quot;click\&quot;,actionCancel,false);\n\t\t\t// Sort the incoming tiddlers by title\n\t\t\ttiddlers = tiddlers.sort(function(a,b) {\n\t\t\t\tif(a.title &lt; b.title) {\n\t\t\t\t\treturn -1;\n\t\t\t\t} else if(a.title &gt; b.title) {\n\t\t\t\t\treturn +1;\n\t\t\t\t} else {\n\t\t\t\t\treturn 0;\n\t\t\t\t}\n\t\t\t});\n\t\t\t// Load the tiddler preview\t\t\t\t\t\t\n\t\t\tvar previewWrapper = document.getElementById(\&quot;startup-warning-preview\&quot;);\n\t\t\tfor(var index=0; index &lt; tiddlers.length; index++) {\n\t\t\t\tvar tiddler = tiddlers[index],\n\t\t\t\t\ttiddlerWrapper = document.createElement(\&quot;li\&quot;),\n\t\t\t\t\ttitleTextWrapper = document.createElement(\&quot;span\&quot;),\n\t\t\t\t\ttitleText = document.createTextNode(tiddler.title),\n\t\t\t\t\tfieldsTable = document.createElement(\&quot;table\&quot;),\n\t\t\t\t\tfieldsTableBody = document.createElement(\&quot;tbody\&quot;);\n\t\t\t\ttitleTextWrapper.appendChild(titleText);\n\t\t\t\ttitleTextWrapper.className = \&quot;tiddler-title\&quot;;\n\t\t\t\ttiddlerWrapper.appendChild(titleTextWrapper);\n\t\t\t\tfieldsTable.appendChild(fieldsTableBody);\n\t\t\t\tvar fields = Object.keys(tiddler).sort();\n\t\t\t\tfor(var fieldIndex = 0; fieldIndex &lt; fields.length; fieldIndex++) {\n\t\t\t\t\tvar fieldName = fields[fieldIndex],\n\t\t\t\t\t\tfieldValue = tiddler[fieldName];\n\t\t\t\t\tif(fieldName !== \&quot;title\&quot;) {\n\t\t\t\t\t\tvar fieldRow = document.createElement(\&quot;tr\&quot;),\n\t\t\t\t\t\t\tfieldRowHeader = document.createElement(\&quot;th\&quot;),\n\t\t\t\t\t\t\tfieldRowValue = document.createElement(\&quot;td\&quot;);\n\t\t\t\t\t\tfieldRowHeader.appendChild(document.createTextNode(fieldName));\n\t\t\t\t\t\tfieldRowValue.appendChild(document.createTextNode(fieldValue));\n\t\t\t\t\t\tfieldRow.appendChild(fieldRowHeader);\n\t\t\t\t\t\tfieldRow.appendChild(fieldRowValue);\n\t\t\t\t\t\tfieldsTableBody.appendChild(fieldRow);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\ttiddlerWrapper.appendChild(fieldsTable);\n\t\t\t\tpreviewWrapper.appendChild(tiddlerWrapper);\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction actionProceed() {\n\t// Remove the banner, load our tiddlers, and boot TiddlyWiki\n\tremoveWarningBanner();\n\t$tw.preloadTiddlers = $tw.preloadTiddlers.concat(tiddlers);\n\t$tw.boot.boot();\n}\n\nfunction actionCancel() {\n\t// Remove the banner, clear the location hash, and boot TiddlyWiki\n\tremoveWarningBanner();\n\tdocument.location.hash = \&quot;#\&quot;;\n\t$tw.boot.boot();\n}\n\nfunction removeWarningBanner() {\n\twarningWrapper.parentNode.removeChild(warningWrapper);\n\tstylesWrapper.parentNode.removeChild(stylesWrapper);\n}\n\n})();\n&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;module-type&quot;: &quot;library&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/rawmarkup&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/rawmarkup&quot;,
+            &quot;tags&quot;: &quot;$:/tags/RawMarkupWikified&quot;,
+            &quot;text&quot;: &quot;`&lt;script&gt;`\n`var tiddlywikiSharePluginStartupWarningHtml = \&quot;`&lt;$view tiddler=\&quot;$:/plugins/tiddlywiki/share/startup-warning.html\&quot; format=\&quot;jsencoded\&quot;/&gt;`\&quot;;`\n`var tiddlywikiSharePluginStartupWarningCss = \&quot;`&lt;$view tiddler=\&quot;$:/plugins/tiddlywiki/share/startup-warning.css\&quot; format=\&quot;jsencoded\&quot;/&gt;`\&quot;;`\n{{$:/plugins/tiddlywiki/share/rawmarkup.js}}\n`&lt;/script&gt;`\n&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/readme&quot;,
+            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-message-box\&quot;&gt;Do not install this plugin unless you understand exactly what it does&lt;/div&gt;\n\nThis experimental plugin provides tools to share tiddlers via URLs, comprising:\n\n* The ability to load a group of tiddlers from the browser location hash at startup\n* Wizard and templates to create URLs from group of tiddlers\n\n&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/settings&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/settings&quot;,
+            &quot;text&quot;: &quot;!! Base sharing URL\n\n//Defaults to the current location//\n\n&lt;$edit-text tiddler=\&quot;$:/config/plugins/share/base-url\&quot; tag=\&quot;input\&quot; class=\&quot;tc-sharing-wizard-editor\&quot;/&gt;\n&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/startup-warning.css&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/startup-warning.css&quot;,
+            &quot;text&quot;: &quot;\n.startup-warning-wrapper {\n\tfont-family: sans-serif;\n\tline-height: 1.4;\n\twidth: 50%;\n\tmargin: 1em auto 0 auto;\n\tpadding: 0 1em;\n\tborder: 6px solid transparent;\n\tborder-radius: 8px;\n\tbackground: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, red 0, red 25%, transparent 0, transparent 50%) 0 / .6em .6em;\n\tanimation: marching-ants 20s linear infinite;\n}\n\n@media (max-width: 600px) {\n\t.startup-warning-wrapper {\n\t\twidth: 85%;\n\t}\n}\n\n#startup-warning-preview {\n    list-style-type: none;\n    padding-left: 0;\n}\n\n#startup-warning-preview .tiddler-title {\n    font-weight: bold;\n    font-size: 1.2em;\n}\n\n#startup-warning-preview table {\n\tmargin-left: 1em;\n}\n\n#startup-warning-preview th {\n\tvertical-align: top;\n\tfont-weight: normal;\n}\n\n#startup-warning-preview td {\n\tfont-family: monospace;\n    white-space: pre-wrap;\n    background: #f8f8f8;\n}\n\n.startup-warning-wrapper button {\n    padding: 0.3em;\n    border-radius: 4px;\n    font-size: 1.5em;\n}\n\n#startup-warning-cancel {\n\tbackground: #DB2828;\n\tcolor: #fff;\n}\n\n#startup-warning-cancel:hover {\n\tbackground: #E75C60;\n\tcolor: #fff;\n}\n\n#startup-warning-cancel:active {\n\tbackground: #ec8d8d;\n\tcolor: #fff;\n}\n\n#startup-warning-proceed {\n\tbackground: #24BA4C;\n\tcolor: #fff;\n}\n\n#startup-warning-proceed:hover {\n\tbackground: #59e27e;\n\tcolor: #fff;\n}\n\n#startup-warning-proceed:active {\n\tbackground: #ABF5BD;\n\tcolor: #fff;\n}\n\n.startup-warning-wrapper h1,\n.startup-warning-wrapper h2 {\n\tfont-weight: bold;\n}\n \n@keyframes marching-ants { to { background-position: 100% 100% } }\n\n&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/startup-warning.html&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/startup-warning.html&quot;,
+            &quot;text&quot;: &quot;&lt;div class=\&quot;startup-warning-wrapper\&quot;&gt;\n&lt;h1&gt;\nWarning: This site is designed to share untrusted content\n&lt;/h1&gt;\n&lt;h2&gt;\nPlease do not proceed unless you are certain you understand the warnings below\n&lt;/h2&gt;\n&lt;p&gt;\nThis is a special site that allows users to share content for &lt;a href=\&quot;https://tiddlywiki.com/\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;TiddlyWiki&lt;/a&gt; without needing conventional hosting. Instead, the content is encoded in the URL used to access the site. This means that there are no controls or protections on the content that is shared, and as such it may contain malicious links or any kind of content.\n&lt;/p&gt;\n&lt;p&gt;\nViewing links to this site in the browser is generally safe because web pages are designed to run in a sandbox that prevents them from accessing or harming your data. However, please exercise caution before downloading content to your own computer, or importing content into your own TiddlyWiki.\n&lt;/p&gt;\n\n&lt;details&gt;\n&lt;summary&gt;\nClick here to see the tiddlers that are being shared\n&lt;/summary&gt;\n&lt;ul id=\&quot;startup-warning-preview\&quot;&gt;\n&lt;/ul&gt;\n&lt;/details&gt;\n\n&lt;p&gt;\n&lt;strong&gt;&lt;em&gt;Only continue if you understand the risks&lt;/em&gt;&lt;/strong&gt;\n&lt;/p&gt;\n\n&lt;p&gt;\n&lt;button id=\&quot;startup-warning-proceed\&quot;&gt;\nProceed\n&lt;/button&gt;\n&lt;button id=\&quot;startup-warning-cancel\&quot;&gt;\nCancel\n&lt;/button&gt;\n&lt;/p&gt;\n\n&lt;h2&gt;\nTechnical details\n&lt;/h2&gt;\n\n&lt;p&gt;\nThis web page is a &lt;a href=\&quot;https://tiddlywiki.com/\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;TiddlyWiki&lt;/a&gt; loaded with the &lt;a href=\&quot;https://github.com/Jermolene/TiddlyWiki5/tree/master/plugins/tiddlywiki/share\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener noreferrer\&quot;&gt;Share plugin&lt;/a&gt;. It has the special capability that at startup it can load raw tiddlers from a block of JSON encoded into the location hash part of the URL (ie the part after the # character).\n&lt;/p&gt;\n&lt;p&gt;\nThis is useful because it enables people to share working examples of TiddlyWikis without needing to arrange special hosting. The only restriction is that browsers and other Internet infrastructure frequently limit the length of URLs to a few tens of kilobytes.\n&lt;/p&gt;\n\n&lt;/div&gt;\n&quot;,
+            &quot;type&quot;: &quot;text/html&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/styles&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/styles&quot;,
+            &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n.tc-sharing-wizard-wrapper {\n\twidth: 100%;\n\tpadding: 1em 1em;\n\tmargin-bottom: 1em;\n    border-radius: 4px;\n    background: &lt;&lt;colour background&gt;&gt;;\n\t&lt;&lt;box-shadow \&quot;inset 0px 2px 3px 2px rgba(0,0,0,0.4)\&quot;&gt;&gt;\n}\n\ninput.tc-sharing-wizard-editor {\n\twidth: 100%;\n}&quot;
+        },
+        &quot;$:/plugins/tiddlywiki/share/wizard&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/share/wizard&quot;,
+            &quot;text&quot;: &quot;\\define generate-json()\n&lt;$text text=&lt;&lt;jsontiddlers filter:\&quot;\&quot;\&quot;$(share-filter)$\&quot;\&quot;\&quot; spaces:\&quot;\&quot;&gt;&gt;/&gt;\n\\end\n\n\\define inner-share-actions()\n&lt;$wikify name=\&quot;json\&quot; text=&lt;&lt;generate-json&gt;&gt;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-copy-to-clipboard\&quot; $param={{{ [&lt;json&gt;encodeuricomponent[]addprefix[##]addprefix&lt;base-url&gt;] }}}/&gt;\n&lt;/$wikify&gt;\n\\end\n\n\\define share-actions()\n&lt;$set name=\&quot;base-url\&quot; value={{$:/config/plugins/share/base-url}} emptyValue={{$:/info/url/full}}&gt;\n&lt;$set name=\&quot;share-filter\&quot; value={{$:/config/plugins/share/filter}}&gt;\n&lt;&lt;inner-share-actions&gt;&gt;\n&lt;/$set&gt;\n&lt;/$set&gt;\n\\end\n\n&lt;div class=\&quot;tc-sharing-wizard-wrapper\&quot;&gt;\n\n! Welcome to the sharing edition of ~TiddlyWiki\n\nThis edition of ~TiddlyWiki allows users to create links to wikis with the special capability of containing embedded tiddlers that are loaded into the target wiki at startup. Most browsers allow tens of kilobytes of data to be loaded in this way, making it possible to conveniently share groups of tiddlers as a fully functional wiki. See the [[readme|$:/plugins/tiddlywiki/share]] for more details.\n\n!! 1 - Import or create the tiddlers that are to be shared\n\nThe first step to create a sharing URL is to import or otherwise create the tiddlers that are to be shared.\n\n!! 2 - Check that the sharing filter is correct\n\nThe tiddlers that are included in the sharing URL are determined by the combination of two filters.\n\nThe sharing filter specifies the tiddlers to be shared:\n\n&lt;$edit-text tiddler=\&quot;$:/config/plugins/share/filter\&quot; tag=\&quot;input\&quot; class=\&quot;tc-sharing-wizard-editor\&quot;/&gt;\n\nThe exclusion subfilter is used to exclude the system tiddlers comprising this wiki:\n\n&lt;$edit-text tiddler=\&quot;$:/config/plugins/share/exclusions\&quot; tag=\&quot;input\&quot; class=\&quot;tc-sharing-wizard-editor\&quot;/&gt;\n\n!! 3 - Review the tiddlers to be shared\n\nTiddlers to be shared (&lt;$count filter={{$:/config/plugins/share/filter}}/&gt;):\n\n&lt;ul&gt;\n&lt;$list filter={{$:/config/plugins/share/filter}}&gt;\n&lt;li&gt;\n&lt;$link&gt;\n&lt;$view field=\&quot;title\&quot;/&gt;\n&lt;/$link&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ul&gt;\n\n!! 3 - Generate the sharing link\n\n&lt;$button&gt;\n&lt;&lt;share-actions&gt;&gt;\nGenerate sharing link\n&lt;/$button&gt; (the link will be copied to the clipboard)\n\n!! 5 - Export the shared tiddlers\n\n&lt;$button&gt;\n&lt;$action-sendmessage $message=\&quot;tm-download-file\&quot; $param=\&quot;$:/core/templates/exporters/JsonFile\&quot; exportFilter={{$:/config/plugins/share/filter}} filename=\&quot;tiddlers.json\&quot;/&gt;\nExport as JSON\n&lt;/$button&gt;\n\n&lt;/div&gt;&quot;
+        }
+    }
+}</pre>
+</div>
 <div created="20200709081027198" creator="Xavier" modified="20200715110712268" modifier="Xavier" title="$:/SiteSubtitle">
 <pre>a digital backpack</pre>
 </div>
 <div created="20200709081001723" creator="Xavier" modified="20200709151641715" modifier="Xavier" title="$:/SiteTitle">
 <pre>{{tools-icon}} Knapsack</pre>
 </div>
+<div created="20200811061112289" creator="Xavier" modified="20200811061112289" modifier="Xavier" title="$:/state/folded/Articles on Design Thinking">
+<pre>hide</pre>
+</div>
+<div created="20200811061112289" creator="Xavier" modified="20200811061112289" modifier="Xavier" title="$:/state/folded/Books on Design Thinking">
+<pre>hide</pre>
+</div>
+<div created="20200811061112289" creator="Xavier" modified="20200811061112289" modifier="Xavier" title="$:/state/folded/Change by Design by Tim Brown">
+<pre>hide</pre>
+</div>
+<div created="20200811061112289" creator="Xavier" modified="20200811061112289" modifier="Xavier" title="$:/state/folded/Design Thinking">
+<pre>show</pre>
+</div>
+<div created="20200811061112289" creator="Xavier" modified="20200811061112289" modifier="Xavier" title="$:/state/folded/What is Design Thinking?">
+<pre>hide</pre>
+</div>
 <div created="20200709101401921" creator="Xavier" modified="20200720154146367" modifier="Xavier" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200709081705512" creator="Xavier" modified="20200811061619711" modifier="Xavier" title="$:/state/tab--1963855381">
+<div created="20200709081705512" creator="Xavier" modified="20200811061648019" modifier="Xavier" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
 <div created="20200709081621230" creator="Xavier" modified="20200709081701554" modifier="Xavier" title="$:/state/tab--2112689675">
@@ -12934,8 +13045,8 @@ exports.context = contextWidget;
 <div created="20200709081623926" creator="Xavier" modified="20200709081657214" modifier="Xavier" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/Stylesheets</pre>
 </div>
-<div created="20200709081702338" creator="Xavier" modified="20200720154611339" modifier="Xavier" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200709081702338" creator="Xavier" modified="20200811062204293" modifier="Xavier" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200709124301795" creator="Xavier" modified="20200713110126763" modifier="Xavier" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -12950,12 +13061,12 @@ exports.context = contextWidget;
 <pre>hide</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div created="20200709081546557" creator="x" modified="20200709081554259" modifier="avier" title="$:/status/UserName">
 <pre>Xavier</pre>
 </div>
-<div created="20200811061151602" creator="Xavier" list="$:/ControlPanel [[Design Thinking]] [[Courses on Design Thinking]] [[Design Thinking in 3 Steps]] [[Books on Design Thinking]] [[Change by Design by Tim Brown]] [[Articles on Design Thinking]] [[What is Design Thinking?]] hello" modified="20200811061611443" modifier="Xavier" title="$:/StoryList">
+<div created="20200811061639836" creator="Xavier" list="$:/core/ui/SideBar/Tools $:/ControlPanel" modified="20200811062201821" modifier="Xavier" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13966,13 +14077,13 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200710110826030" creator="Xavier" dependents="" description="Basic theme" modified="20200710110826030" modifier="Xavier" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200710110830861" creator="Xavier" modified="20200710110844776" modifier="Xavier" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
+<div created="20200710110830861" creator="Xavier" modified="20200811062217676" modifier="Xavier" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
 <div created="20200715102258513" creator="Xavier" modified="20200715102319409" modifier="Xavier" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20200710110826023" creator="Xavier" modified="20200710110826023" modifier="Xavier" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
+<div created="20200811062301817" creator="Xavier" modified="20200811062301817" modifier="Xavier" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
 <div created="20200709151148628" creator="Xavier" modified="20200713112630372" modifier="Xavier" title="$:/temp/TWCrossLinksFoldData" type="application/json">
@@ -13981,7 +14092,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
     &quot;user experience&quot;: &quot;hide&quot;
 }</pre>
 </div>
-<div created="20200709081703982" creator="Xavier" modified="20200811061618012" modifier="Xavier" title="$:/theme">
+<div created="20200709081703982" creator="Xavier" modified="20200709081703982" modifier="Xavier" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22">
@@ -14102,7 +14213,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200514035239004" modified="20200514035640992" tags="$:/tags/Image" title="$:/user/images/popup-link">
 <pre>&lt;svg width=&quot;22pt&quot; height=&quot;22pt&quot; class=&quot;tc-popup-link-button tc-image-button&quot; viewBox=&quot;0 0 400 400&quot;&gt;&lt;path d=&quot;M297.333 3.001c-16.479 3.33-16.404 3.27-65.879 52.589-49.98 49.821-50.491 50.422-54.893 64.439-2.298 7.317-2.297 23.961.002 31.281 2.392 7.617 7.985 18.023 9.687 18.023 2.092 0 30.417-29.658 30.417-31.849 0-4.403 2.097-6.716 43.765-48.273 45.73-45.607 43.561-43.766 49.466-41.98 4.693 1.419 42.824 40.475 43.256 44.305.646 5.728 1.632 4.593-42.027 48.342-42.956 43.045-43.406 43.455-47.599 43.455-2.424 0-3.235.698-17.867 15.357l-15.328 15.357 1.655 1.263c17.552 13.392 43.933 14.067 63.174 1.617 4.439-2.872 87.17-84.958 91.977-91.26 14.879-19.505 14.791-47.465-.211-67-3.958-5.154-43.913-44.686-47.812-47.305C327.468 3.535 310.998.24 297.333 3.001m-44 115.072c-5.551 2.142-130.874 127.201-134.196 133.913-8.924 18.035 9.248 36.995 28.53 29.764 5.211-1.954 130.679-127.304 133.862-133.736 8.831-17.844-9.393-37.196-28.196-29.941m-126.557 56.674c-8.587 1.428-17.698 5.458-24.776 10.96-5.33 4.142-87.421 86.711-89.941 90.464-13.452 20.035-12.774 46.341 1.68 65.162 3.958 5.154 43.913 44.686 47.811 47.305 19.686 13.227 46.316 12.268 65.117-2.345 5.206-4.046 87.397-86.673 89.817-90.293 12.656-18.933 12.798-43.988.357-62.788-.927-1.4-2.022-2.545-2.435-2.545-2.094 0-32.406 31.672-32.406 33.86 0 4.39-2.112 6.72-43.432 47.919-45.431 45.298-43.952 44.04-49.649 42.223-2.765-.882-40.666-37.748-42.634-41.469-1.222-2.312-1.22-6.76.003-9.066.525-.991 19.65-20.453 42.5-43.25 43.277-43.178 44.199-43.996 47.974-42.551.553.212 7.258-6.019 17.238-16.017l16.333-16.363-1.654-1.263c-10.995-8.39-27.578-12.324-41.903-9.943&quot; fill-rule=&quot;evenodd&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20200811061622890" creator="Xavier" modified="20200811061622890" modifier="Xavier" title="$:/view" type="text/vnd.tiddlywiki">
+<div created="20200811061651495" creator="Xavier" modified="20200811061651495" modifier="Xavier" title="$:/view" type="text/vnd.tiddlywiki">
 <pre>pop</pre>
 </div>
 <div created="20200709151355923" creator="Xavier" modified="20200709153339448" modifier="Xavier" tags="$:/tags/Stylesheet" title="$:/xr/css-tweaks">
